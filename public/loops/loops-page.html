@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Loops</title>
+</head>
+
+<body>
+
+    <nav>
+        <a class="home-button" href="/">cheatsheet</a>
+    </nav>
+
+    <h1>Loops</h1>
+
+    <View>
+
+        <div class="theme">
+            <h2>Loops do's</h2>
+            <p>Anything you need to know about Loops.</p>
+
+            <div class="text-container">
+                <h3>Rules</h3>
+                <p>Rule 1: Use loop methods in JavaScript (specifically).</p>
+                <p>Rule 2: Don't use "for loops" unless if you are finger counting.</p>
+                <p>Rule 3: Use <code>.map()</code> if you need that data afterwards, otherwise only use
+                    <code>.forEach()</code> if you don't.
+                </p>
+            </div>
+
+            <div class="text-container">
+                <h3></h3>
+                <p>In modern JS, prefer array methods over traditional for loops when working with arrays.
+                    The main methods to know:</p>
+
+                <code>.forEach(), .map(), .filter(), .reduce(), .find(), .findIndex(), .indexOf</code>
+                <p> we use <code>.map()</code> to return a new list of the same size: 1:1. If we want a smaller
+                    list we use <code>.filter()</code>, and if we use <code>.reduce()</code> we get 1.</p>
+            </div>
+
+            <div class="text-container">
+                <h3>.map()</h3>
+                <p>Example for <code>.map()</code></p>
+
+                <code>
+                    <pre>
+
+    const numbers = [1, 2, 3, 4, 5]
+
+    // Task: double the numbers
+     const doubleNumbers = numbers.map((number) => number * 2)
+
+    // Results in: [ 2, 4, 6, 8, 10 ]
+                    </pre>
+                </code>
+            </div>
+
+            <div class="text-container">
+                <h3>.map() with objects</h3>
+                <p>Example for <code>.map()</code></p>
+
+                <code>
+                    <pre>
+
+    const countries = [
+        {name: "Lesotho", gdp: 530 },
+        {name: "Papua New Guinea", gdp: 1025},
+        {name: "Saint Vincent and the Grenadines", gdp: 1200}
+    ]
+                       
+     // Task: if the country is lesotho, boost the GDP with 500
+
+    const countriesWithGDPUpdated = countries.map ((country) => ({    
+        name: country.name,
+        gdp: country.name === "Lesotho" ? country.gdp + 500 : country.gdp
+    
+    }))
+
+    // Result 
+
+    [
+        { name: "Lesotho", gdp: 1030 },
+        { name: "Papua New Guinea", gdp: 1025 },
+        { name: "Saint Vincent and the Grenadines", gdp: 1200 }
+    ] 
+                
+                    </pre>
+                </code>
+            </div>
+
+            <div class="text-container">
+                <h3>Side effects</h3>
+                <p>
+                    In computer science, an operation or expression is said to have a side effect
+                    if it has any observable effect other than its primary effect of reading the
+                    value of its arguments and returning a value to the invoker of the operation. - wiki
+                </p>
+                <p>Example from earlier</p>
+
+                <code>
+                    <pre>
+
+    // This changes the original object
+        country.gdp += 500
+
+    // While this creates a new object
+    {
+        name: country.name,
+        gdp: country.gdp + 500
+    }
+                    </pre>
+                </code>
+                <p>This can cause bugs, as another parts of your program might expect the original data.</p>
+            </div>
+
+            <div class="text-container">
+                <h3>.filter()</h3>
+                <p>We use <code>.filter()</code> when we want a smaller array containing specific conditions</p>
+
+                <code>
+                    <pre>
+
+    // Example:
+    const numbers = [1, 2, 3, 4, 5]
+
+    const evenNumbers =numbers.filter((number) => number > 3)
+
+    // Result: This will keep the numbers greater than 3
+
+                    </pre>
+                </code>
+            </div>
+
+        </div>
+
+        <div class="theme">
+            <h2>Loops dont's</h2>
+            <p>everything you need to know not to do with Loops.</p>
+
+            <div class="text-container">
+                <h3>Rules</h3>
+                <p>Rule 1: Always use loop methods in modern JS. </p>
+                <p>Rule 2: 'for loops' are only used when finger counting is needed (counting to a number).</p>
+            </div>
+
+            <div class="text-container">
+                <h4>Here are 8 arguments for why loop methods (forEach, map, filter, sort, find, reduce) are better.
+                </h4>
+            </div>
+
+            <div class="text-container">
+                <h3>Argument 1:</h3>
+                <p>Brevity - loop methods are often shorter than traditional "for loops"</p>
+
+                <div id="side-by-side-example">
+                    <code>
+                        <pre>
+
+    // Traditional for loop
+    for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[i])
+    }   
+                        </pre>
+                     </code>
+
+                    <code>
+                         <pre>
+
+    // .forEach() method
+    numbers.forEach((number) => console.log(number))
+                          </pre>
+                    </code>
+
+                </div>
+            </div>
+
+            <div class="text-container">
+                <h3>Argument 2:</h3>
+                <p>Clarity - loop methods communicate intent</p>
+
+                <code>
+                    <pre>
+
+    /*
+     .forEach() - for each element, do this
+     .filter() - keep each element that matches conditions
+     .find() - find an element
+    
+    */
+                    </pre>
+                </code>
+            </div>
+
+            <div class="text-container">
+                <h3>Argument 3:</h3>
+                <p>No accidental indexing errors (out of bounds)</p>
+
+                <p>When using "for loops" you manually work with index,
+                    which creates opportunites for syntax mistakes. With <code>.forEach()</code>
+                    you just relie on your variables </p>
+            </div>
+
+            <div class="text-container">
+                <h3>Argument 4:</h3>
+                <p>Avoids for of/in numbers confusion</p>
+
+                <p style="background-color: red;">I don't remeber what this was about</p>
+
+                <div id="side-by-side-example">
+                    <code>
+                        <pre>
+
+    // for in
+    let list = [4, 5, 6]
+
+    for (let i in list) {
+        console.log(i) // "0", "1", "2" <- strings
+    }
+                        </pre>
+                     </code>
+
+                    <code>
+                         <pre>
+
+    // for in
+    let list = [4, 5, 6]
+
+    for (let i of list) {
+        console.log(i) // 4, 5, 6 <- numbers
+    }
+                          </pre>
+                    </code>
+
+                </div>
+            </div>
+
+            <div class="text-container">
+                <h3>Argument 5:</h3>
+                <p>Able to access both element and index at the same time</p>
+
+
+                <div id="side-by-side-example">
+                    <code>
+                        <pre>
+
+    // Example:
+    numbers.forEach((number, index) => {
+        console.log(number, index)
+    });
+                        </pre>
+                     </code>
+
+                    <code>
+                         <pre>
+
+    // Result: 
+        6 0
+        7 1
+        8 2
+        9 3
+                          </pre>
+                    </code>
+
+                </div>
+            </div>
+
+
+            <div class="text-container">
+                <h3>Argument 6:</h3>
+                <p>Avoids side effects!!! </p>
+
+                <p style="background-color: red;">Not sure about this one either</p>
+
+
+                <code>
+                    <pre>
+    
+    let oddIndexSideEffect = []
+    let index = 0
+
+        for (number of numbers) {
+            if (index % 2 === 1) {
+                oddIndexSideEffect.push(Number(number))
+        }
+        index++
+    }
+
+                    </pre>
+                </code>
+            </div>
+
+            <div class="text-container">
+                <h3>Argument 7:</h3>
+                <p>Shorter and more readable / maintainable</p>
+
+                <p>The second version has less code and directly expresses the operation</p>
+                <div id="side-by-side-example">
+                    <code>
+                        <pre>
+
+    // Example:
+    let oddIndexSideEffect = []
+    let index = 0
+
+        for (number of numbers) {
+            if (index % 2 === 1) {
+                oddIndexSideEffect.push(Number(number))
+        }
+        index++
+    }
+                        </pre>
+                     </code>
+
+                    <code>
+                         <pre>
+
+    // Example
+    const oddNumbers = numbers.filter((element, index) => index % 2 === 1)
+                          </pre>
+                    </code>
+
+                </div>
+            </div>
+
+
+            <div class="text-container">
+                <h3>Argument 8:</h3>
+                <p>Doesn't mutate the original list</p>
+
+                <p>When we use the traditional "for loop" we risk modifying the
+                    original data. When we use <code>.mao()</code> we create a new array,
+                    that way the original data remains unchanged, so we can
+                    reuse it if we want to.</p>
+
+                     <div id="side-by-side-example">
+                    <code>
+                        <pre>
+
+    // Example:
+    for (index in numbers) {
+        numbers[index] = numbers[index] * 2  
+    }
+
+    // Before
+        numbers = [6, 7, 8, 9]
+
+    // After
+        numbers = [12, 14, 16, 18]   
+   
+                        </pre>
+                     </code>
+
+                    <code>
+                         <pre>
+
+    // Example
+    const doubledList = numbers.map((number) => number * 2)
+
+    // Original array - can still be used as is
+        numbers = [6, 7, 8, 9]
+
+    // Created new array
+         numbers = [12, 14, 16, 18] 
+                          </pre>
+                    </code>
+
+                </div>
+            </div>
+
+
+        </div>
+    </View>
+
+</body>
+
+</html>

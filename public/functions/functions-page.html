@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Functions</title>
+</head>
+
+<body>
+
+    <nav>
+        <a class="home-button" href="/">cheatsheet</a>
+    </nav>
+
+    <h1>Functions</h1>
+
+    <View>
+
+        <div>
+            <div class="theme">
+                <h2>Functions & Hoisting</h2>
+                <p>Anything you need to know about functions.</p>
+
+                <div class="text-container">
+                    <h3>Hoisting</h3>
+                    <p>JS reads documents with a "Just In Time" compilar - (JIT).
+                        This means that JS processes certain declarations before executing the code. </p>
+                    <p>A function (and <code>const</code> and <code>let</code> aswell) can therefore be called before it
+                        appears in the code:</p>
+
+                    <code>
+                    <pre>
+
+    getRandsomInt(5, 10)
+
+    function getRandsomInt (min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+                    </pre>
+                </code>
+                    <p>This works because the function is hoisted.</p>
+                </div>
+
+                <div class="text-container">
+                    <h3>Random numbers</h3>
+                    <p>In the example before we saw the method <code>.random()</code>.
+                        In the <code>function getRandsomInt</code> we ask it to generate a random integer between
+                        <code>min</code> and <code>max</code>, including both.
+                    </p>
+
+                    <code>
+                    <pre>
+
+    // Example:
+    getRandomInt(5, 10);
+
+    // The function can return either one of these: 5, 6, 7, 8, 9, or 10
+                    </pre>
+                </code>
+                </div>
+
+
+                <div class="text-container">
+                    <h3>Anonymous function</h3>
+                    <p>An "Anonymous function", is a function without a name</p>
+
+                    <code>
+                    <pre>
+
+    // Example
+    const getRandsomIntAnonymousFunction = function (min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    // This function doesn't have a name
+    function (min, max) { }
+
+    // Instead it's stores in the variable
+    const getRandomIntAnonymousFunction = ...
+                    </pre>
+                </code>
+
+                    <p>A more visual side-by-side example:</p>
+                    <div id="side-by-side-example">
+                        <code>
+                        <pre>
+
+    // Function declaration
+    const getRandomIntAnonymousFunction = ...
+
+    function nonAnonymousFunction(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+                        </pre>
+                     </code>
+
+                        <code>
+                         <pre>
+
+    // Anonymous function
+    const getRandsomIntAnonymousFunction = function (min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+                          </pre>
+                    </code>
+
+                    </div>
+                </div>
+
+                <div class="text-container">
+                    <h3>Functions as Arguments</h3>
+                    <p>JavaScript allows you to pass a function as an argument to another function.</p>
+
+                    <code>
+                        <pre>
+
+    // Example:
+    function genericActionPerformer(name, action) {
+        return action(name);
+    }
+
+    // Task: Using the genericActionPerformer, can you make it say: Elias likes to play guitar 
+    const name = "Elias";
+
+    function playingGuitarAction (name) {
+        return `${name} likes to play guitar`;
+    }
+
+    console.log(genericActionPerformer("Elias", playingGuitarAction));
+
+    // Result prints: Elias likes to play guitar
+                        </pre>
+                    </code>
+                </div>
+
+                <div class="text-container">
+                    <h3>NaN - Not a Number</h3>
+                    <p>NaN usually happens when JavaScript tries to perform a numerical operation with something that isn't a valid number.</p>
+                    
+                    <code>
+                        <pre>
+                            
+    // Example:
+    Number("hello");
+                        </pre>
+                    </code>
+                </div>
+
+            </div>
+
+    </View>
+
+</body>
+
+</html>
