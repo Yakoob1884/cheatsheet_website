@@ -22,7 +22,7 @@ app.get('/Loops', (req, res) => {
 })
 
 app.get('/Variables', (req, res) => {
-    res.sendFile(path.resolve('public/variables/variables.html'))
+    res.sendFile(path.resolve('public/variables/variables-page.html'))
 })
 
 

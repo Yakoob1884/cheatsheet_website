@@ -1,6 +1,16 @@
-a {
+body {
+    font-family: sans-serif;
+}
+
+.home-button,
+h1{ 
+    text-decoration: none;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal
     
 }
+
 
 .theme-container {
     display: grid;
@@ -21,7 +31,7 @@ a {
 }
 
 .theme {
-    background-color: #fdefe1;
+    background-color: #9ec8a9;
     border-radius: 8px;
     padding: 15px;
     margin: 10px;
@@ -43,4 +53,10 @@ code {
     border-radius: 8px;
     padding: 15px;
     margin: 10px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px #DC898E;
+}
+
+footer {
+
 }

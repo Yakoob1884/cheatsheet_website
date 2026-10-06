@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+    <link rel="stylesheet" href="/assets/CSS/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <title>Variables</title>
+</head>
+
+<body>
+    <nav>
+        <a class="home-button" href="/">📝 cheatsheet</a>
+    </nav>
+
+    <h1>Variables</h1>
+
+    <View>
+
+        <div class="theme">
+
+            <div id="theme-container">
+                <h2>Variables I</h2>
+                <p>Anything you need to know about variables I</p>
+
+                <div class="text-container">
+                    <h3>Node REPL</h3>
+                    <p>Node REPL (Read-Eval-Print-Loop) allows you to write and execute JavaScript directly in the
+                        terminal.
+                        This tool is useful for quick testing and debugging.</p>
+
+                    <p>How we run the JS:</p>
+                    <code>
+                    <pre>
+
+    //In terminal 
+        
+        $  node &lt;file-name&gt;
+
+    // This will run whatever code you have and show it in the terminal
+                    </pre>
+                </code>
+                </div>
+
+
+                <div class="text-container">
+                    <h3>Type coercion</h3>
+                    <p>Type coercion is the conversion of a value from one data type to another, likw a string becomes a
+                        number</p>
+                    <p>To avoid this, use strict equality checks: === or !== whenever it's possible</p>
+
+                    <code>
+                    <pre>
+
+    // Strict equality (=== or !== ) checks both the value and the data type
+    // While equal (== !=) only checks the value.
+                    </pre>
+                </code>
+            </div>
+
+            <div class="text-container">
+                    <h3>Variables: const and let</h3>
+                    <p>The rule is to use const whenever possible, otherwise use let when you know the value needs to change.</p>
+
+                    <code>
+                    <pre>
+
+    const myFavoriteNumber = 6
+    // The number will stay const-ant 😜
+
+    let age = 20
+    age = 21
+    // If we print age, it will now be 21 instead of the original value of 20
+                    </pre>
+                </code>
+            </div>
+
+            <div class="text-container">
+                    <h3>JavaScript objects</h3>
+                    <p>Objects store data using key-value pairs.</p>
+
+                <code>
+                    <pre>
+    // Example:
+
+    const person = {
+        name: "Morten"
+    }
+
+    // The key is name, and the value is Morten
+                    </pre>
+                </code>
+
+                <p>You can also add properties after creating the object</p>
+
+                <code>
+                    <pre>
+    
+    person.age = 69;
+
+    // Now the object becomes:
+    {
+        name: "Morten",
+        age: 69
+    }
+                    </pre>
+                </code>
+
+
+                </div>
+
+        </div>
+
+
+        <div class="theme">
+
+            <div id="theme-container">
+                <h2>Variables II</h2>
+                <p>Anything you need to know about variables II</p>
+
+
+            </div>
+        
+        </div>
+
+        
+
+    </View>
+
+    <footer>
+        <p id="footer-copyright"></p>
+    </footer>
+
+    <script src="/assets/js/footer.js"></script>
+
+</body>
+
+</html>

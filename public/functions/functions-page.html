@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+    <link rel="stylesheet" href="/assets/CSS/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 
     <title>Functions</title>
 </head>
@@ -12,26 +18,25 @@
 <body>
 
     <nav>
-        <a class="home-button" href="/">cheatsheet</a>
+        <a class="home-button" href="/">📝 cheatsheet</a>
     </nav>
 
     <h1>Functions</h1>
 
     <View>
 
-        <div>
-            <div class="theme">
-                <h2>Functions & Hoisting</h2>
-                <p>Anything you need to know about functions.</p>
+        <div class="theme">
+            <h2>Functions & Hoisting</h2>
+            <p>Anything you need to know about functions.</p>
 
-                <div class="text-container">
-                    <h3>Hoisting</h3>
-                    <p>JS reads documents with a "Just In Time" compilar - (JIT).
-                        This means that JS processes certain declarations before executing the code. </p>
-                    <p>A function (and <code>const</code> and <code>let</code> aswell) can therefore be called before it
-                        appears in the code:</p>
+            <div class="text-container">
+                <h3>Hoisting</h3>
+                <p>JS reads documents with a "Just In Time" compilar - (JIT).
+                    This means that JS processes certain declarations before executing the code. </p>
+                <p>A function (and <code>const</code> and <code>let</code> aswell) can therefore be called before it
+                    appears in the code:</p>
 
-                    <code>
+                <code>
                     <pre>
 
     getRandsomInt(5, 10)
@@ -41,17 +46,17 @@
     }
                     </pre>
                 </code>
-                    <p>This works because the function is hoisted.</p>
-                </div>
+                <p>This works because the function is hoisted.</p>
+            </div>
 
-                <div class="text-container">
-                    <h3>Random numbers</h3>
-                    <p>In the example before we saw the method <code>.random()</code>.
-                        In the <code>function getRandsomInt</code> we ask it to generate a random integer between
-                        <code>min</code> and <code>max</code>, including both.
-                    </p>
+            <div class="text-container">
+                <h3>Random numbers</h3>
+                <p>In the example before we saw the method <code>.random()</code>.
+                    In the <code>function getRandsomInt</code> we ask it to generate a random integer between
+                    <code>min</code> and <code>max</code>, including both.
+                </p>
 
-                    <code>
+                <code>
                     <pre>
 
     // Example:
@@ -60,14 +65,14 @@
     // The function can return either one of these: 5, 6, 7, 8, 9, or 10
                     </pre>
                 </code>
-                </div>
+            </div>
 
 
-                <div class="text-container">
-                    <h3>Anonymous function</h3>
-                    <p>An "Anonymous function", is a function without a name</p>
+            <div class="text-container">
+                <h3>Anonymous function</h3>
+                <p>An "Anonymous function", is a function without a name</p>
 
-                    <code>
+                <code>
                     <pre>
 
     // Example
@@ -83,9 +88,9 @@
                     </pre>
                 </code>
 
-                    <p>A more visual side-by-side example:</p>
-                    <div id="side-by-side-example">
-                        <code>
+                <p>A more visual side-by-side example:</p>
+                <div id="side-by-side-example">
+                    <code>
                         <pre>
 
     // Function declaration
@@ -97,7 +102,7 @@
                         </pre>
                      </code>
 
-                        <code>
+                    <code>
                          <pre>
 
     // Anonymous function
@@ -107,14 +112,14 @@
                           </pre>
                     </code>
 
-                    </div>
                 </div>
+            </div>
 
-                <div class="text-container">
-                    <h3>Functions as Arguments</h3>
-                    <p>JavaScript allows you to pass a function as an argument to another function.</p>
+            <div class="text-container">
+                <h3>Functions as Arguments</h3>
+                <p>JavaScript allows you to pass a function as an argument to another function.</p>
 
-                    <code>
+                <code>
                         <pre>
 
     // Example:
@@ -134,24 +139,29 @@
     // Result prints: Elias likes to play guitar
                         </pre>
                     </code>
-                </div>
+            </div>
 
-                <div class="text-container">
-                    <h3>NaN - Not a Number</h3>
-                    <p>NaN usually happens when JavaScript tries to perform a numerical operation with something that isn't a valid number.</p>
-                    
-                    <code>
+            <div class="text-container">
+                <h3>NaN - Not a Number</h3>
+                <p>NaN usually happens when JavaScript tries to perform a numerical operation with something that isn't
+                    a valid number.</p>
+
+                <code>
                         <pre>
                             
     // Example:
     Number("hello");
                         </pre>
                     </code>
-                </div>
-
             </div>
 
     </View>
+
+    <footer>
+        <p id="footer-copyright"></p>
+    </footer>
+
+    <script src="/assets/js/footer.js"></script>
 
 </body>
 
