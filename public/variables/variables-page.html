@@ -63,11 +63,12 @@
     // While equal (== !=) only checks the value.
                     </pre>
                 </code>
-            </div>
+                </div>
 
-            <div class="text-container">
+                <div class="text-container">
                     <h3>Variables: const and let</h3>
-                    <p>The rule is to use const whenever possible, otherwise use let when you know the value needs to change.</p>
+                    <p>The rule is to use const whenever possible, otherwise use let when you know the value needs to
+                        change.</p>
 
                     <code>
                     <pre>
@@ -80,57 +81,149 @@
     // If we print age, it will now be 21 instead of the original value of 20
                     </pre>
                 </code>
-            </div>
+                </div>
 
-            <div class="text-container">
+                <div class="text-container">
                     <h3>JavaScript objects</h3>
                     <p>Objects store data using key-value pairs.</p>
 
-                <code>
+                    <code>
                     <pre>
+
     // Example:
 
     const person = {
-        name: "Morten"
+        name: "Adam"
     }
 
-    // The key is name, and the value is Morten
+    // The key is name, and the value is Adam
                     </pre>
                 </code>
 
-                <p>You can also add properties after creating the object</p>
+                    <p>You can also add properties after creating the object</p>
 
-                <code>
+                    <code>
                     <pre>
     
-    person.age = 69;
+    person.age = 69
 
     // Now the object becomes:
     {
-        name: "Morten",
+        name: "Adam",
         age: 69
     }
                     </pre>
                 </code>
+                    <p>You can also delete properties again, by using <code>delete person.name</code>. Delete person
+                        does not delete the object.</p>
+                </div>
+
+                <div class="text-container">
+                    <h3>Arrays</h3>
+                    <p>Arrays are used to store multiple values.</p>
+                    <p>If we want to add an item to our array, we use <code>.push()</code>.</p>
+
+                <code>
+                    <pre>
+                        
+    // Example:
+    const things = ["mouse"]
+
+    things.push("car")
+
+    // If we print things we will get the following result: ["mouse", "car"]
+                    </pre>
+                </code>
+
+                    <p>If we want to remove an item from our array, we use <code>.pop()</code></p>
+
+                <code>
+                    <pre>
+
+    // Our array: ["mouse", "car"]
+    
+    things.pop()
+
+    // If we print things we will get the following result: ["mouse"]
+                    </pre>
+                </code>
+                </div>
+
+                <div class="text-container">
+                    <h3>console.log()</h3>
+                    <p>Rule: Use comma in console.log when passing multiple values</p>
+                    <p>We use commas to avoid concatenating values with "+", because "+" can trigger type coercion, and change the values.</p>
+
+                    <code>
+                    <pre>
+
+    // Example:
+
+    console.log(5 + 6)          // 11
+    console.log("5" + "6")      // 56
+    console.log(5, 6)           // 5 6
+    console.log("5" , "6")      // 5 6
+                    </pre>
+                </code>
+                </div>
+
+                <div class="text-container">
+                    <h3>Data types in JavaScript</h3>
+                    <p>Strings, Boolean, Number, BigInt, null, undefined, Object, Symbol.</p>
+
+                    <code>
+                    <pre>
+
+    // Example:
+
+    const name = "Adam"        // String
+    const isStudent = true     // Boolean
+    const age = 69             // Number
+    const nothing = null       // null
+    let value                  // undefined
+
+                    </pre>
+                </code>
+                </div>
+
+                <div class="text-container">
+                    <h3>Strings</h3>
+                    <p>Strings can be written in many ways using:</p>
+                    <p>Double quotes, single quotes or template literals, </p>
+
+                    <code>
+                    <pre>
+
+    // Example:
+    const greeting = "Hello"
+    const greeting = 'Hello'
+    const greeting = `Hello`
+
+    // Template literals also allow string interpolation using ${}
+    const greeting = `Hello "${person.name}". This is the introduction class to Node.js`;
+
+    // If person.name is "Adam", the result becomes:
+    // Hello "Adam". This is the introduction class to Node.js
+                    </pre>
+                </code>
+
+                <p>Template literals can also be used for multi-line strings.</p>
+                </div>
+            </div>
+
+
+            <div class="theme">
+
+                <div id="theme-container">
+                    <h2>Variables II</h2>
+                    <p>Anything you need to know about variables II</p>
 
 
                 </div>
 
-        </div>
-
-
-        <div class="theme">
-
-            <div id="theme-container">
-                <h2>Variables II</h2>
-                <p>Anything you need to know about variables II</p>
-
-
             </div>
-        
-        </div>
 
-        
+
 
     </View>
 
