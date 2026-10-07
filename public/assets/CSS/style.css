@@ -3,12 +3,11 @@ body {
 }
 
 .home-button,
-h1{ 
+h1 {
     text-decoration: none;
     font-family: "Zen Dots", sans-serif;
     font-weight: 400;
     font-style: normal
-    
 }
 
 
@@ -58,5 +57,5 @@ code {
 }
 
 footer {
-
+    
 }

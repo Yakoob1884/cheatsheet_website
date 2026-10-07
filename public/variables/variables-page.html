@@ -37,7 +37,7 @@
                         This tool is useful for quick testing and debugging.</p>
 
                     <p>How we run the JS:</p>
-                    <code>
+                <code>
                     <pre>
 
     //In terminal 
@@ -56,7 +56,7 @@
                         number</p>
                     <p>To avoid this, use strict equality checks: === or !== whenever it's possible</p>
 
-                    <code>
+                <code>
                     <pre>
 
     // Strict equality (=== or !== ) checks both the value and the data type
@@ -70,7 +70,7 @@
                     <p>The rule is to use const whenever possible, otherwise use let when you know the value needs to
                         change.</p>
 
-                    <code>
+                <code>
                     <pre>
 
     const myFavoriteNumber = 6
@@ -87,7 +87,7 @@
                     <h3>JavaScript objects</h3>
                     <p>Objects store data using key-value pairs.</p>
 
-                    <code>
+                <code>
                     <pre>
 
     // Example:
@@ -137,7 +137,7 @@
 
                     <p>If we want to remove an item from our array, we use <code>.pop()</code></p>
 
-                <code>
+                    <code>
                     <pre>
 
     // Our array: ["mouse", "car"]
@@ -152,9 +152,10 @@
                 <div class="text-container">
                     <h3>console.log()</h3>
                     <p>Rule: Use comma in console.log when passing multiple values</p>
-                    <p>We use commas to avoid concatenating values with "+", because "+" can trigger type coercion, and change the values.</p>
+                    <p>We use commas to avoid concatenating values with "+", because "+"
+                        can trigger type coercion, and change the values.</p>
 
-                    <code>
+                <code>
                     <pre>
 
     // Example:
@@ -171,7 +172,7 @@
                     <h3>Data types in JavaScript</h3>
                     <p>Strings, Boolean, Number, BigInt, null, undefined, Object, Symbol.</p>
 
-                    <code>
+                <code>
                     <pre>
 
     // Example:
@@ -191,7 +192,7 @@
                     <p>Strings can be written in many ways using:</p>
                     <p>Double quotes, single quotes or template literals, </p>
 
-                    <code>
+                <code>
                     <pre>
 
     // Example:
@@ -207,23 +208,91 @@
                     </pre>
                 </code>
 
-                <p>Template literals can also be used for multi-line strings.</p>
+                    <p>Template literals can also be used for multi-line strings.</p>
                 </div>
             </div>
 
-
-            <div class="theme">
-
-                <div id="theme-container">
-                    <h2>Variables II</h2>
-                    <p>Anything you need to know about variables II</p>
+        </div>
 
 
+        <div class="theme">
+
+            <div id="theme-container">
+                <h2>Variables II</h2>
+                <p>Anything you need to know about variables II</p>
+
+                <div class="text-container">
+                    <h3>Strict Mode</h3>
+                    <p>With strict mode, you can't use undeclared variables.
+                        Strict mode is declared by adding <code>"use strict"</code>
+                        to the beginning of a script or a function.</p>
+                    <p>If declared at the beginning of a script, it has
+                        global scope and all the code in the script will execute
+                        in strict mode</p>
+
+                <code>
+                    <pre>
+                        
+    // Example:
+    "use strict"
+    totalGlobalVariables = "Never EVER do this" 
+
+    // This causes an error because the variable was never declared
+                    </pre>
+                </code>
+
+                    <p>Some words cannot be used as variable names in certain contexts.
+                        <code>public</code> is a reserved keyword in strict-mode contexts
+                        and can cause an error.
+                    </p>
+
+                </div>
+
+
+                <div class="text-container">
+                    <h3>Block scope</h3>
+                    <p>Any code wrapped in curly braces, like an <code>if</code>
+                        statements, <code>for</code> or <code>while</code> loops,
+                        or standalone blocks, is a block</p>
+                    <p>Variables declared with <code>let</code> and <code>const</code>
+                        are block-scoped, while <code>var</code> behaves differently and
+                        is not block-scoped</p>
+
+                    <div id="side-by-side-example">
+                    <code>
+                        <pre>
+
+    // Example:
+    {
+        var someValue = 123
+        {
+            var someValue = 456
+        }
+        console.log(someValue) // Prints 456
+    }
+                        </pre>
+                    </code>
+
+                     <code>
+                         <pre>
+
+    // Example
+    {
+        let someOtherValue = true
+        {
+            let someOtherValue = false
+        }
+        console.log(someOtherValue) // Prints true
+    }
+                          </pre>
+                    </code>
+
+                    </div>
                 </div>
 
             </div>
 
-
+        </div>
 
     </View>
 
