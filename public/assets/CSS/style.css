@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    background-color: rgb(255, 242, 231);
 }
 
 .home-button,
@@ -10,10 +11,26 @@ h1 {
     font-style: normal
 }
 
-
-.theme-container {
+#theme-container {
     display: grid;
-    grid-column: 3;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+#theme-container a{
+    text-decoration: none;
+    font-family: "Zen Dots", sans-serif;
+    font-size: xx-large;
+}
+
+#theme-container button {
+    border-radius: 8px;
+    width: 150px;
+    height: 125px;
+    margin: 20px 75px;
+    background-color:#dcb089;
+    box-shadow:  7px 7px #9ebcc8;
+    border-color: #d88338;
 }
 
 #side-by-side-example {

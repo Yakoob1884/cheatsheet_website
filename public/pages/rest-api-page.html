@@ -1,0 +1,70 @@
+<h1>REST API</h1>
+
+<div class="theme">
+
+    <div id="theme-container">
+        <h2>REST API</h2>
+        <p>Everything you need to know about REST API's</p>
+
+        <div class="text-container">
+            <h3>Rules</h3>
+            <p>Rule 1: Always use the right HTTP verbs</p>
+            <p>Rule 2: Always use the right order (GET, POST, PUT, PATCH, DELETE)</p>
+            <p>Rule 3: Always use nouns, and always make them plural </p>
+
+            <p>Since i'm currently on a plane, we are gonna use planecrashes lol</p>
+            <table>
+                <thead>
+                    <td>HTTP Method</td>
+                    <td>Endpoint</td>
+                    <td>Description</td>
+                </thead>
+                <tr>
+                    <td>GET</td>
+                    <td>/planecrashes</td>
+                    <td>Retrieves all the crashes</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>/planecrashes/{id}</td>
+                    <td>Retrieves a crash by id</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>/planecrashes</td>
+                    <td>Creates a crash resource</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>/planecrashes/{id}</td>
+                    <td>Replaces an entire crash resource</td>
+                </tr>
+                <tr>
+                    <td>PATCH</td>
+                    <td>/planecrashes/{id}</td>
+                    <td>Replaces parts of the crash resource</td>
+                </tr>
+                <tr>
+                    <td>DELETE</td>
+                    <td>/planecrashes/{id}</td>
+                    <td>Deletes a language resource</td>
+                </tr>
+            </table>
+
+            <p>Example of a GET request</p>
+            <code>
+                    <pre>
+                        
+    // Example:
+    app.get('/planecrashes', async (req, res) => {
+        res.send({ data: await fetchAllPlanecrashes() })
+    })
+                    </pre>
+                </code>
+        </div>
+
+
+    </div>
+
+
+</div>
