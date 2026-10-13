@@ -3,11 +3,92 @@
 <div class="theme">
 
     <div id="theme-container">
-        <h2>CommonJS</h2>
+        <h2>Server</h2>
+        <p>Everything you need to know to set up your first server</p>
+
+        <div class="text-container">
+            <h3>NPM</h3>
+            <p>npm or Node Package Manager is the world's largest Software 
+                registry and is free to use.It is the default manager for Node.js
+                 and is installed alongside Node.js: <a>https://nodejs.org/</a></p>
+            <p>When we first want to make our server, we first have to declare our dependencies
+                 in a file called <code>package.json</code> We do this to tell npm what 
+                 dependencies we want to have, and that way, when we share the code, 
+                the same dependencies will pe applied for everyone else</p>
+
+            <code>
+                    <pre>
+                        
+    {
+        "dependencies" : {
+            "express": "5.2.1"
+        }
+    }
+                    </pre>
+                </code>
+
+                <p>When we have declared the dependencies in our <code>package.json</code>,
+                     we will go into the terminal and install our project dependencies with 
+                     <code>$ npm install</code>. When we have installed, two new files will 
+                     have appeared. <code>package-lock.json</code> and folder called <code>node_modules</code> 
+                     that contains our dependencies</p>
+        
+        </div>
+
+        <div class="text-container">
+            <h3>Express server</h3>
+            <p>The basic structure of an Express application, consists of importing the Express
+                 module, creating an instance of the express application and starting the server</p>
+
+            <code>
+                    <pre>
+                        
+    const express = require('express')
+    const app = express()
+    const PORT = 8080
+
+    app.listen(PORT, (error) => {
+        if (error){
+            console.log(error)
+            return
+        }
+        console.log("Server is running on port ", PORT)
+    })
+                    </pre>
+                </code>
+                <p>This code will be saved in a file called <code>app.js</code>, and can be run
+                     with <code>$ node app.js</code> in the terminal.</p>
+        </div>
+
+        <div class="text-container">
+            <h3>Nodemon</h3>
+            <p>Right now we use <code>$ node app.js</code> to run code in the terminal, but we can also use something called nodemon.</p>
+            <p>Nodemon is a tool helps node based applications by automatically restart when file changes in the directory are detected. 
+                You can install nodemon as a development dependency or globally to your system path.
+            </p>
+
+            <code>
+                    <pre>
+                        
+    // Install as a dependency
+        npm install --save-dev nodemon
+
+    // Install globally
+        npm install -g nodemon
+
+                    </pre>
+                </code>
+        </div>
+
+    </div>
+
+
+    <div id="theme-container">
+        <h2>JavaScript Modules</h2>
         <p>Theme intro</p>
 
         <div class="text-container">
-            <h3>What</h3>
+            <h3>What are modules?</h3>
             <p>About what</p>
 
             <code>
@@ -18,15 +99,33 @@
                 </code>
         </div>
 
-    </div>
+        <div class="text-container">
+            <h3>CommonJS</h3>
+            <p>CommonJS modules are the original way to package JavaScript code for Node.js 
+            CommonJS is widely used today for server-side JavaScript with Node.js</p>
 
-
-    <div id="theme-container">
-        <h2>ES Module</h2>
-        <p>Theme intro</p>
+            <code>
+                    <pre>
+                        
+    // Example:
+                    </pre>
+                </code>
+        </div>
 
         <div class="text-container">
-            <h3>What</h3>
+            <h3>ES Modules</h3>
+            <p>About what</p>
+
+            <code>
+                    <pre>
+                        
+    // Example:
+                    </pre>
+                </code>
+        </div>
+
+        <div class="text-container">
+            <h3>CommonJS vs ES modules</h3>
             <p>About what</p>
 
             <code>

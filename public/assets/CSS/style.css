@@ -11,26 +11,32 @@ h1 {
     font-style: normal
 }
 
-#theme-container {
+#button-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
 
-#theme-container a{
+#button-container a {
     text-decoration: none;
     font-family: "Zen Dots", sans-serif;
     font-size: xx-large;
+    color: white;
 }
 
-#theme-container button {
+#button-container button {
     border-radius: 8px;
-    width: 150px;
+    border-style: none;
+    width: 225px;
     height: 125px;
     margin: 20px 75px;
-    background-color:#dcb089;
-    box-shadow:  7px 7px #9ebcc8;
-    border-color: #d88338;
+    background-color: #d88338;
+    box-shadow: 10px 10px #9ebcc8;
+}
+
+#button-container :hover {
+    color: #9ebcc8;
+    transform: scaleY(0.5), scaleX(0.5);
 }
 
 #side-by-side-example {
@@ -73,6 +79,26 @@ code {
     box-shadow: 10px 10px #DC898E;
 }
 
-footer {
-    
+table {
+  border-collapse: collapse;
+  margin-left: 250px;
 }
+
+thead {
+  background-color:#ffb779;
+  color: #fff;
+  font-weight: bold;
+}
+
+thead,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color:  #9ebcc8;
+    color: #fff;
+}
+
+footer {}
