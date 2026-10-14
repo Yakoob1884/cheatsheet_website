@@ -8,6 +8,7 @@ export function constructPage(page, options = {}) {
     .replace('{{CSS_LINKS}}', options.cssLinks || "")
     .replace('{{JS_LINKS}}', options.jsLinks || "")
     .replace('{{TAB_TITLE}}', options.tabTitle || "Cheatsheet")
+    .replace('{{NAV_LINK}}', options.navLink || "")
      + page
      + footer
 }

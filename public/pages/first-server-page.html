@@ -1,4 +1,4 @@
-<h1>Servers</h1>
+<h1>First server</h1>
 
 <div class="theme">
 
@@ -85,53 +85,66 @@
 
     <div id="theme-container">
         <h2>JavaScript Modules</h2>
-        <p>Theme intro</p>
+        <p>Everything you need to know about Node.js modules</p>
 
         <div class="text-container">
             <h3>What are modules?</h3>
-            <p>About what</p>
-
-            <code>
-                    <pre>
-                        
-    // Example:
-                    </pre>
-                </code>
+            <p> Modules are building blocks in Node.jsappliation, that makes the code into
+                 seperate file, so you organize your code into logical resuable components</p>
+            <p>To use any built-in module, we use the <code>require()</code> function. In Node.js
+                 any file with a .js extension is a module.</p>
+           
         </div>
 
         <div class="text-container">
             <h3>CommonJS</h3>
-            <p>CommonJS modules are the original way to package JavaScript code for Node.js 
-            CommonJS is widely used today for server-side JavaScript with Node.js</p>
+            <p>CommonJS modules are the original way (and the default) to package JavaScript code
+                 for Node.js and widely used today for server-side JavaScript with Node.js</p>
+            <p>CommenJS uses the <code>require()</code>, and local modules and JSON files can
+                 be imported using a relative path </p>
 
             <code>
                     <pre>
                         
-    // Example:
+    // app.js
+    const fruitOrchard = require('./fruitOrchard.js')
+    
+    console.log(fruitOrchard.fruits)
+
+    // fruitOrchard.js
+    const fruitOrchard = {
+        fruits: ["🍑", "🥝", "🍉", "🍒", "🍌", "🍋"]
+    }
+
+    module.exports = fruitOrchard
+   
                     </pre>
                 </code>
         </div>
 
         <div class="text-container">
             <h3>ES Modules</h3>
-            <p>About what</p>
+            <p>ES Modules or ESM,  is the official standard format for packaging JavaScript code for
+                 reuse. Before ES Modules, Node.js exclusively used the CommonJS module format. Now we 
+                 choose between CommonJS and ES Modules based on the project</p>
+            <p>If we want to use ESM, we would have to add <code>"type": "module"</code> to our <code>package.json</code></p>
+            <p>ESM uses <code>import</code> instead of <code>require()</code></p>
 
             <code>
                     <pre>
                         
-    // Example:
-                    </pre>
-                </code>
-        </div>
+    // app.js
+    import fruitOrchard from './fruitOrchard.js'
 
-        <div class="text-container">
-            <h3>CommonJS vs ES modules</h3>
-            <p>About what</p>
+    console.log(fruitOrchard.fruits)
 
-            <code>
-                    <pre>
-                        
-    // Example:
+
+    // fruitOrchard.js
+    const fruitOrchard = {
+        fruits: ["🍑", "🥝", "🍉", "🍒", "🍌", "🍋"]
+    }
+
+    export default fruitOrchard
                     </pre>
                 </code>
         </div>

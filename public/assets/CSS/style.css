@@ -27,16 +27,16 @@ h1 {
 #button-container button {
     border-radius: 8px;
     border-style: none;
-    width: 225px;
-    height: 125px;
-    margin: 20px 75px;
+    width: 215px;
+    height: 115px;
+    margin: 14px 65px;
     background-color: #d88338;
     box-shadow: 10px 10px #9ebcc8;
 }
 
-#button-container :hover {
+#button-container  :hover {
     color: #9ebcc8;
-    transform: scaleY(0.5), scaleX(0.5);
+    
 }
 
 #side-by-side-example {
@@ -101,4 +101,8 @@ tr:nth-child(even) {
     color: #fff;
 }
 
-footer {}
+footer {
+    bottom: 0px;
+    width: 100%;
+    text-align: center
+}
