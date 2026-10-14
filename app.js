@@ -1,5 +1,5 @@
 import express from 'express'
-import { apiPage, frontpagePage, functionsPage, gitPage, loopsPage, serverPage, variablesPage } from './templatingEngine/pages.js'
+import { apiPage, frontpagePage, functionsPage, gitPage, loopsPage, serverPage, variablesPage, webPage, xssPage } from './templatingEngine/pages.js'
 const app = express()
 
 const PORT = 8080
@@ -39,6 +39,13 @@ app.get('/servers', (req, res) => {
     res.send(serverPage)
 })
 
+app.get('/web-fundamentals', (req, res) => {
+    res.send(webPage)
+})
+
+app.get('/xss', (req, res) => {
+    res.send(xssPage)
+})
 
 
 app.listen(PORT, (error) =>{
